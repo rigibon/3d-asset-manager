@@ -1,0 +1,129 @@
+.settings {
+    background-color: rgb(39, 39, 39);
+    height: 100%;
+    box-shadow: -5px 2px 5px 0px rgba(39,39,39,0.75);
+-webkit-box-shadow: -5px 2px 5px 0px rgba(39,39,39,0.75);
+-moz-box-shadow: -5px 2px 5px 0px rgba(39,39,39,0.75);
+}
+
+.explorer-span-container {
+    background-color: #1a1a1a;
+    padding-left: 15px;
+}
+
+.settings-span {
+    font-size: 11px;
+}
+
+span {
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    margin: 0;
+    top: 5px;
+    letter-spacing: 0.01rem;
+}
+
+#asset-img-on-settings {
+    margin: auto;
+    margin-top: 15px;
+    display: block;
+    width: 200px;
+}
+
+.settings-asset-name {
+    float: right;
+    margin-right: 7%;
+    display: inline;
+    color:rgb(255, 255, 255);
+}
+
+.settings-property-tag {
+    display: inline;
+    margin-left: 7%;
+    color:rgb(150, 150, 150);
+}
+
+.settings-properties {
+    /* margin-left: 25px; */
+    float: auto;
+    margin-bottom: 4px;
+}
+
+hr {
+    color: black;
+}
+
+input {
+    background-color:rgb(56, 56, 56);
+    border: 0;
+    border-radius: 0;
+}
+
+input:focus {
+    border: 0;
+    border-radius: 0;
+}
+
+input::placeholder {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+}
+
+a span {
+    color: rgb(255, 255, 255);
+}
+
+.close-button {
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    background-color: rgb(204, 70, 70);
+    padding-top: 1px;
+    float: right;
+}
+
+.open-settings-button {
+    border: 0;
+    border-radius: 2px;
+    background-color:rgb(30, 150, 230);
+    color: white;
+    box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+-webkit-box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+-moz-box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+    width: 90%;
+    font-size: 14px;
+    height: 25px;
+}
+
+.delete-asset-button {
+    border: 0;
+    border-radius: 2px;
+    background-color:rgb(189, 25, 25);
+    color: white;
+    font-size: 12px;
+    box-shadow: 0px 0px 4px 1px rgb(189, 25, 25);
+-webkit-box-shadow: 0px 0px 4px 1px rgb(189, 25, 25);
+-moz-box-shadow: 0px 0px 4px 1px rgb(189, 25, 25);
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+    width: 90%;
+    height: 25px;
+    font-family: "Inter";
+}
+
+.asset-name {
+    font-size: 12px;
+    font-family: "Inter";
+    display: block;
+    margin: 12px;
+    background-color: rgb(48, 48, 48);
+}

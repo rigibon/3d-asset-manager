@@ -1,0 +1,10 @@
+<div class="categories-bar">
+    <a *ngFor="let tempCategory of categories" routerLink="/board/{{ tempCategory.name }}">
+        <button mat-button [ngClass]="{'clicked': selectedCategory.id === tempCategory.id}" (click)="selectCategory(tempCategory);" id="btn1" class="clicked"
+            style="height:60px;width:40px;align-items:center;">
+            <i id="icon" [ngClass]="{'bi bi-box-fill': tempCategory.name === 'Model', 'bi bi-circle-fill': tempCategory.name === 'Material', 'bi bi-card-image': tempCategory.name === 'Images'}"></i>
+        </button>
+    </a>
+</div>
+
+

@@ -1,0 +1,26 @@
+<div id="asset-card" class="card" style="width: 9rem;">
+    <div *ngIf="loadingAsset" class="overlay">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-grow" role="status">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+    </div>
+    <a *ngIf="!loadingAsset">
+        <button id="{{asset.id}}" class="card-favorite-button"
+            [ngClass]="{'bi bi-star': !asset.favorite, 'bi bi-star-fill': asset.favorite }"
+            (click)="favorite(asset);"></button>
+    </a>
+    <a *ngIf="!loadingAsset">
+        <button class="bi bi-gear-fill card-settings-button" (click)="openSettingsOnAsset(asset);"></button>
+    </a>
+    <a *ngIf="!loadingAsset">
+        <button class="bi bi-arrow-90deg-left card-move-button" (click)="openMoveModal(asset);"></button>
+    </a>
+    <img #assetImageLoaded [hidden]="loadingAsset" (load)="onLoadImage()" class="card-img-top" id={{asset.src}} src=""
+        alt="Card image cap">
+
+    <div class="card-body">
+        <span class="card-title">{{ nameAsset }}</span>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<nav id="nav-bar" style="background-color: rgb(19, 19, 19); height: 40px;" class="navbar navbar-expand-lg">
+    <a style="font-family:'Inter'; font-size: 15px; color: white;" class="navbar-brand" id="header-tag" href="#"><b>3D Model Manager</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span style="font-family:'Inter'; font-size: 12px; color: white;" class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0" id="search">
+            <input #myInput id="search-bar" class="mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button (click)="doSearch(myInput.value)" type="submit" id="search-button" class="my-2 my-sm-0">
+                <i id="icon" class="bi bi-search"></i>
+            </button>
+        </form>
+    </div>
+    <button id="logout-button" (click)="logout()">Log out</button>
+</nav>

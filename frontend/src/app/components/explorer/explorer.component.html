@@ -1,0 +1,81 @@
+<div class="explorer-span-container">
+  <span class="explorer-span">EXPLORER</span>
+</div>
+
+<button class="collapsible" (click)="onClickProjectSpan($event)">
+
+  <div class="row g-0">
+    <div class="col-sm-2">
+      <i *ngIf="!isProjectTabExpanded();" id="icon" class="bi bi-chevron-right"></i>
+      <i *ngIf="isProjectTabExpanded();" id="icon" class="bi bi-chevron-down"></i>
+    </div>
+
+    <!-- <div class="col">
+      
+    </div> -->
+
+    <div class="col-sm-8">
+      <b class="col">PROJECT</b>
+    </div>
+
+    <div class="col-sm-1">
+      <button id="icon-gizmo-folder" (click)="openFolderCreation();" class="bi bi-folder-plus"></button>
+    </div>
+
+    <div class="col-sm-1">
+      <button id="icon-gizmo" class="bi bi-arrow-clockwise"></button>
+    </div>
+  </div>
+
+</button>
+
+<div class="col box">
+  <div id="content-wrap" class="row">
+    <cdk-virtual-scroll-viewport id="content" itemSize="48" style="height: 125rem;" class="scrolling">
+      <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="example-tree">
+        <mat-nested-tree-node class="tree-node-child" *matTreeNodeDef="let node; when: hasChild">
+          <div class="mat-tree-node">
+            <button [ngClass]="{'icon-button': selectedFolder.id !== node.id, 'icon-button-selected': selectedFolder.id === node.id}" id="basic" matTreeNodeToggle>
+              <span>
+                <i *ngIf="treeControl.isExpanded(node) && node.type === 'folder';" id="icon" class="bi bi-chevron-down"></i>
+                <i *ngIf="!treeControl.isExpanded(node) && node.type === 'folder';" id="icon" class="bi bi-chevron-right"></i>
+
+                <span style="width:100%;" class="bi bi-folder-fill folder-button" *ngIf="node.type === 'folder'" (click)="selectFolder(node.name, node.id)"> {{node.name}}</span>
+                <button
+                  *ngIf="node.type === 'material' || node.type === 'model' || node.type === 'image'"
+                  id="icon-button-2"
+                  (click)="openSettingsOnAsset(node.asset)"
+                  [ngClass]="{'bi bi-box-fill': node.type === 'model', 'bi bi-circle-fill': node.type === 'material', 'bi bi-card-image': node.type === 'image'}"
+                  > 
+                  {{node.name}}
+                </button>
+                <!-- <button *ngIf="node.type === 'material'" id="icon-button-2" class="bi bi-circle-fill"> {{node.name}}</button>
+                <button *ngIf="node.type === 'image'" id="icon-button-2" class="bi bi-card-image"> {{node.name}}</button> -->
+                
+              </span>
+            </button>
+          </div>
+          <div [class.example-tree-invisible]="!treeControl.isExpanded(node)" role="group">
+            <ng-container matTreeNodeOutlet></ng-container>
+          </div>
+        </mat-nested-tree-node>
+      </mat-tree>
+
+      <!-- <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <form #form="ngForm" (ngSubmit)="createFolder(form)" novalidate>
+                <button class="upload" type="submit">Submit</button>
+            </form>
+        </div>
+        </div> -->
+    </cdk-virtual-scroll-viewport>
+  </div>
+
+  <div class="separator-explorer"></div>
+
+  <div id="content-wrap-2" class="row content">
+  </div>
+
+
+</div>

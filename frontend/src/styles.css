@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+/* background: rgb(49, 49, 49); */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+html, body { height: 100%; width:100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background: rgb(41,41,41);
+    background: linear-gradient(0deg, rgba(41,41,41,1) 31%, rgba(28,28,28,1) 74%); }
+
+.mat-tree-node { 
+    min-height: 28px !important;
+}
+
+.bi bi-star {
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline;
+    margin-left: 68%;
+    color: white;
+}
+
+.bi bi-star-fill {
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline;
+    margin-left: 68%;
+    color: white;
+}

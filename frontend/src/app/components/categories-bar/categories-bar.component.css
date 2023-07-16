@@ -1,0 +1,40 @@
+.active-btn:focus {
+    background-color: rgb(49, 49, 49) !important;
+}
+
+.clicked {
+    background-color: rgb(49, 49, 49);
+}
+
+#category-tag {
+    font-size: 12px;
+    top: 25px;
+    font-family: "Inter";
+    color: rgb(230, 230, 230);
+}
+
+#London {
+    padding: 15px;
+}
+
+#icon {
+    color: rgb(230, 230, 230);
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.categories-bar {
+    background-color: rgb(41, 41, 41);
+}
+
+#btn,
+#btn1,
+#btn2 {
+    /* background-color: rgb(41, 41, 41); */
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}

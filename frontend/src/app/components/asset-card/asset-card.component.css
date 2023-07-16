@@ -1,0 +1,85 @@
+.card-img-top {
+    background-color: rgb(35, 35, 35);
+    border-radius: 0;
+}
+
+.card {
+    top: 12px;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    /* transition: all 0.1s ease-in-out; */
+    box-shadow: 0px 0px 12px 0px rgba(20, 20, 20, 0.75);
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(20, 20, 20, 0.75);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(20, 20, 20, 0.75);
+}
+
+.card:hover {
+    transform: scale(1.04);
+    border-radius: 0;
+    box-shadow: 0px 1px 4px rgba(100, 100, 100, 0.8);
+}
+
+.card-body {
+    background-color: rgb(26, 26, 26);
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    padding-top: 7px;
+}
+
+.card-title {
+    margin: auto;
+    display: table;
+    font-size: 10px;
+    font-family: "Inter";
+    color: rgb(230, 230, 230);
+}
+
+.spinner-grow {
+    color: rgb(26, 26, 26);
+    margin-top: 58px;
+}
+
+.overlay {
+    height: 9rem;
+    background-color: rgb(35, 35, 35);
+}
+
+.card-settings-button {
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline;
+    margin-left: 82%;
+    color: white;
+}
+
+.card-favorite-button {
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline;
+    margin-left: 68%;
+    color: white;
+}
+
+.card-move-button {
+    position: absolute;
+    border: 0;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    background: transparent;
+    display: inline;
+    margin-left: 0%;
+    color: white;
+}

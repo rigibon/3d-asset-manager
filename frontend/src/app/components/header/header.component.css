@@ -1,0 +1,53 @@
+.navbar-brand {
+    font-family: "Inter";
+    color: cadetblue;
+    margin-left: 12px;
+    font-weight: 200;
+}
+
+#search-bar {
+    font-family: "Inter";
+    font-size: 12px;
+    border-radius: 2px 0 0 2px;
+    border: 0;
+    height: 25px;
+}
+
+#search {
+    display: inline;
+}
+
+#search-button {
+    float: right;
+    border: 0;
+    height: 25px;
+    background-color: rgb(184, 184, 184);
+    border-radius: 0 2px 2px 0;
+}
+
+#search-bar:focus {
+    outline: 0;
+}
+
+#logout-button {
+    float: right;
+    background-color: rgba(70, 70, 70, 0.514);
+    border: 0;
+    border-radius: 2px;
+    color: white;
+    font-family: "Inter";
+    font-size: 12px;
+    margin-right: 7px;
+}
+
+#nav-bar {
+    display: block;
+}
+
+#navbarSupportedContent {
+    float: left;
+}
+
+#header-tag {
+    float: left;
+}

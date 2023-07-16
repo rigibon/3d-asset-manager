@@ -1,0 +1,35 @@
+<div class="settings">
+    <div class="explorer-span-container">
+        <span class="settings-span">SETTINGS</span>
+        <button (click)="this.assetsService.openSettings.next(false);" class="bi bi-x close-button"></button>
+    </div>
+    <div class="settings-section">
+        <span *ngIf="selectedAsset" class="asset-name">{{selectedAsset.name}}</span>
+        <img *ngIf="selectedAsset" id="asset-img-on-settings" src="https://assets-backend.onrender.com/downloadFile/{{selectedAsset.src}}">
+        <button *ngIf="selectedAsset && selectedAsset.category.name === 'Model'" class="open-settings-button" (click)="openOnEditor(selectedAsset)">Open with Atelier 3D</button>
+        <button class="open-settings-button" (click)="downloadAsset(selectedAsset)">Download</button>
+        <hr>
+        <span style="margin-left: 7%;">Properties</span>
+        <div class="settings-properties">
+            <span class="settings-property-tag">Name</span>
+            <span *ngIf="selectedAsset" class="settings-asset-name">{{selectedAsset.name}}</span>
+        </div>
+        <div class="settings-properties">
+            <span class="settings-property-tag">Format</span>
+            <span *ngIf="selectedAsset" class="settings-asset-name">{{selectedAsset.format}}</span>
+        </div>
+        <div class="settings-properties">
+            <span class="settings-property-tag">Category</span>
+            <span *ngIf="selectedAsset" class="settings-asset-name">{{selectedAsset.category.name}}</span>
+        </div>
+        <div class="settings-properties">
+            <span class="settings-property-tag">Folder</span>
+            <span class="settings-asset-name">
+                <a href="">
+                    <u *ngIf="selectedAsset">project/{{selectedAsset.category.name}}/{{selectedAsset.name}}</u>
+                </a>
+            </span>
+        </div>
+        <button *ngIf="selectedAsset" class="delete-asset-button" (click)="deleteAsset(selectedAsset.id)">Delete</button>
+    </div>
+</div>

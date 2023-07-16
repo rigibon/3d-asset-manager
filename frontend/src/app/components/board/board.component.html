@@ -1,0 +1,21 @@
+<div class="container-fluid p-0 m-0 h-100" style="overflow:hidden;">
+    <app-header></app-header>
+    <div class="row justify-content-center h-100 g-0">
+        <div class="col-md-2">
+            <div class="h-100 d-flex flex-column">
+                <div class="row justify-content-center bg-blue flex-grow-1">
+                    <app-explorer></app-explorer>
+                </div>
+            </div>
+        </div>
+
+        <div id="bg-gray" [ngClass]="{'col-md-10 bg-gray text-white': !openSettings, 'col-md-7 bg-gray text-white': openSettings}">
+            <app-categories-bar></app-categories-bar>
+            <app-assets-panel></app-assets-panel>
+        </div>
+
+        <div *ngIf="openSettings" class="col-md-3">
+            <app-settings style="height: 100%;"></app-settings>
+        </div>
+    </div>
+</div>

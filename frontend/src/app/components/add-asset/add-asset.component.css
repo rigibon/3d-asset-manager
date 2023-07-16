@@ -1,0 +1,10 @@
+.add-container {
+    height: 125px;
+    width: 125px;
+    background-color: black;
+    margin-left: 25%;
+}
+
+span {
+    color: white;
+}

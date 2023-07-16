@@ -1,0 +1,84 @@
+<cdk-virtual-scroll-viewport id="content" itemSize="48" style="height: 39rem;" class="scrolling">
+    <div id="Meshes" class="city">
+        <div class="row g-0">
+            <span class="col" id="category-tag">Current folder: Project / {{ selectedFolder.name }}</span>
+            <div class="col" id="asd">
+                <button mat-button style="float: right;" id="addAssetButton" data-toggle="modal" data-target="#add-asset-modal">
+                    <i id="icon" class="bi bi-plus"></i>
+                </button>
+            </div>
+        </div>
+        <span *ngIf="selectedCategory" class="col" id="category-tag">Category: {{ selectedCategory.name }}</span>
+        <div class="row g-1">
+            <app-asset-card *ngFor="let tempAsset of assets" [asset]="tempAsset" class="col-md-auto" nameAsset="{{tempAsset.name}}" asset_image_src="{{tempAsset.src}}"></app-asset-card>
+            <!-- <app-asset-card class="col-md-auto" nameAsset="stitch_free.glb" asset_image_src="stitch_cover.png"></app-asset-card>
+            <app-asset-card class="col-md-auto" nameAsset="knight_-_includes_file_for_3d_printing.glb" asset_image_src="knight.png"></app-asset-card> -->
+            <!-- <app-asset-card class="col-md-auto" nameAsset="free_shovel_knight.glb" asset_image_src="shovel_knight.glb"></app-asset-card>
+            <app-asset-card class="col-md-auto" nameAsset="windmill.glb" asset_image_src="windmill.glb"></app-asset-card>
+            <app-asset-card class="col-md-auto" nameAsset="sci-fi_personal_space_pod_shipweekly_challenge.glb" asset_image_src="scifi.glb"></app-asset-card> -->
+        </div>
+    </div>
+
+    <div id="Materials" class="city" style="display:none">
+        <div class="row g-0">
+            <span class="col" id="category-tag">Materials</span>
+            <div class="col" id="asd">
+                <button mat-button style="float: right;" id="addAssetButton">
+                    <i id="icon" class="bi bi-plus"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- <div class="row g-1">
+            <app-asset-card class="col-md-auto" nameAsset="terrain_pbr.glb" asset_image_src="assets/pbr-texture-removebg.png"></app-asset-card>
+            <app-asset-card class="col-md-auto" nameAsset="marble_pbr.glb" asset_image_src="assets/shadermatcap-removebg.png"></app-asset-card>
+        </div> -->
+    </div>
+
+    <div id="Tokyo" class="city" style="display:none">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+</cdk-virtual-scroll-viewport>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <label class="form-label" for="customFile"><span>Upload a new asset</span></label>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+        <input type="file" class="form-control" id="customFile" (change)="onChange($event)"/>
+        <button class="upload" type="submit">Submit</button>
+    </form>
+    </div>
+</div>
+
+<div id="myFolderModal" class="folder-modal">
+
+    <!-- Folder modal content -->
+    <div class="modal-folder-content" id="folder-modal">
+        <span class="close" (click)="closeFolderModal();">&times;</span>
+        <label class="form-label" for="customFile"><span>Create a new folder</span></label>
+        <form #apiForm="ngForm" (ngSubmit)="onSubmitFolder(apiForm)" novalidate>
+            <div class="settings-properties">
+                <span class="settings-property-tag">Name</span>
+                <input type="text" class="settings-asset-name" id="customFile" name="folderName" ngModel/>
+            </div>
+            <button class="upload" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div id="myMoveAssetModal" class="folder-modal">
+
+    <!-- Folder modal content -->
+    <div class="modal-folder-content" id="folder-modal">
+        <span class="close" (click)="closeMoveAssetModal();">&times;</span>
+        <label class="form-label" for="customFile"><span>Move to a folder</span></label>
+        <div id="folder-to-move" *ngFor="let tempFolder of folders" (click)="moveAsset(assetToMove, tempFolder)">{{ tempFolder.name }}</div>
+    </div>
+</div>

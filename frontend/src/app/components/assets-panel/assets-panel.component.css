@@ -1,0 +1,226 @@
+#category-tag {
+  font-size: 12px;
+  top: 25px;
+  font-family: "Inter";
+  color: rgb(230, 230, 230);
+}
+
+#Meshes,
+#Materials {
+  padding: 15px;
+  height: 100%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 32, 32);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#addAssetButton {
+  background-color: rgb(30, 150, 230);
+  color: white;
+  border-radius: 2px;
+  transition: all 0.1s ease-in-out;
+  padding: 0px;
+  margin: 0;
+  min-width: 10px;
+  width: 38px;
+  box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+-webkit-box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+-moz-box-shadow: 0px 0px 4px 1px rgb(30, 150, 230);
+}
+
+#addAssetButton:hover {
+  background-color: rgb(72, 181, 253);
+}
+
+span {
+  font-family: "Inter";
+  color: white;
+}
+
+#icon {
+  font-size: 25px;
+}
+
+#add-tag {
+  font-family: "Inter";
+  font-size: 18px;
+}
+
+#asd {
+  padding: 0;
+  margin: 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  border: 0;
+  border-radius: 0;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #2b2b2b;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  /* Could be more or less, depending on screen size */
+  border: 0;
+  border-radius: 0;
+}
+
+.modal-content span {
+  color: white;
+  font-family: "Inter";
+}
+
+.modal-text {
+  margin-top: 12px;
+}
+
+/* The Modal (background) */
+.folder-modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  border: 0;
+  border-radius: 0;
+}
+
+/* Modal Content/Box */
+.modal-folder-content {
+  background-color: #2b2b2b;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 25%;
+  /* Could be more or less, depending on screen size */
+  border: 0;
+  border-radius: 0;
+}
+
+.modal-folder-content span {
+  color: white;
+  font-family: "Inter";
+}
+
+.modal-text {
+  margin-top: 12px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  margin-left: 95%;
+  font-size: 28px;
+  font-weight: bold;
+  width: 25px;
+}
+
+#customFile {
+  border: 0;
+  border-radius: 0;
+  font-family: "Inter";
+  font-size: 14px;
+  color: white;
+  background-color: #252525;
+}
+
+input:active {
+  border: 0;
+  border-color: rgb(30, 150, 230);
+}
+
+.upload {
+  border: 0;
+  border-radius: 0;
+  color: white;
+  background-color:#1a1a1a;
+  font-family: "Inter";
+  margin-top: 12px;
+  height: 32px;
+  width: 100%;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.settings-properties {
+  /* margin-left: 25px; */
+  float: auto;
+  margin-bottom: 12px;
+}
+
+.settings-asset-name {
+  float: right;
+  margin-right: 7%;
+  display: inline;
+  color:rgb(255, 255, 255);
+}
+
+.settings-property-tag {
+  display: inline;
+  margin-left: 7%;
+  color:rgb(150, 150, 150);
+  border-radius: 0;
+  border: 0;
+}
+
+#customFile:focus {
+  outline: none;
+}
+
+#folder-to-move {
+  color: rgb(204, 204, 204);
+  font-size: 15px;
+}
+
+#folder-to-move:hover {
+  cursor: pointer;
+  color: white;
+}
